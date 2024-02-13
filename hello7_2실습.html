@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-Oriented Programming Example</title>
+</head>
+<body> 
+    <script>
+        // 객체지향프로그래밍실습
+        // 사용자 객체
+        /*const me = {
+            이름: '주인님',
+            주소: 서울시,
+            펫: null, // 초기에 펫 객체는 없음
+            펫양육: function (pet) {
+                console.log(`${this.이름}이 ${pet.이름}을/를 키우기 시작했습니다.`);
+                this.펫 = pet;
+            },
+            먹이주기: function () {
+                if (this.펫) {
+                    console.log(`${this.이름}이 ${this.펫.이름}에게 먹이를 줍니다.`);
+                    this.펫.먹이먹기();
+                } else {
+                    console.log(`${this.이름}이 펫이 없어서 먹이를 줄 수 없습니다.`);
+                }
+            }
+        };
+
+        // 펫 객체
+        const pet = {
+            이름: '강아지',
+            나이: 2,
+            레벨: 1,
+            먹이먹기: function () {
+                console.log(`${this.이름}가 먹이를 먹어서 레벨이 올라갑니다.`);
+                this.레벨++;
+            }
+        };
+
+        // 펫 양육 시작
+        me.펫양육(pet);
+
+        // 먹이 주기
+        me.먹이주기();*/
+
+
+        
+        //위에 내용을 프로토타입과 생성자를 이용하여 바꿔보기
+        function User(이름, 주소) {
+            this.이름= '주인님';
+            this.주소= 서울시;
+            this.펫= null;
+        };
+
+        // 프로토타입에 메서드 추가
+        User.prototype.펫양육 = function (pet) {
+            console.log(`${this.이름}이 ${pet.이름}을/를 키우기 시작했습니다.`);
+            this.펫 = pet;
+        },
+        User.prototype.먹이주기: function () {
+            if (this.펫) {
+                console.log(`${this.이름}이 ${this.펫.이름}에게 먹이를 줍니다.`);
+                this.펫.먹이먹기();
+            } else {
+                console.log(`${this.이름}이 펫이 없어서 먹이를 줄 수 없습니다.`);
+            }
+        };
+
+        //생성자 함수
+        function 펫(이름, 나이) {
+            this.이름= 이름;
+            this.나이= 나이;
+            this.레벨= 1;            
+        };
+
+        // 프로토타입에 메서드 추가
+        펫.prototype.먹이먹기 = function () {
+            console.log(`${this.이름}가 먹이를 먹어서 레벨이 올라갑니다.`);
+            this.레벨++;
+        };
+
+        // 객체 생성
+        const me = new User('주인님', '서울시');
+        const 강아지 = new 펫('강아지',2);
+
+        // 펫 양육 시작
+        me.펫양육(pet);
+
+        // 먹이 주기
+        me.먹이주기();
+    </script>
+</body>
+</html>

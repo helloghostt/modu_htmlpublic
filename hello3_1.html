@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>내부 스타일</title>
+	<style>
+		p {
+				color:yellow; 
+				background-color:black;
+		}
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {}
+
+        #myDiv {
+            border: 1px solid red;
+        }
+
+        p {
+            border: inherit;
+        }
+
+        .myP {
+            border: 1px solid red;
+        }
+
+        .myP.myPMore {
+            border: 1px dotted blue;
+            color: white;
+        }
+        p::before {
+            content: 'hello';
+        }
+        p::after {
+            content: 'world';
+        }
+	</style>
+</head>
+<body>
+	<p>Hello world</p>
+</body>
+</html>
+
+<br>
+<br>
+<br>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <input type="text">
+    <div id="myDiv">
+        <p class="myP">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni consequuntur vel quod ratione,
+            inventore sit
+            iure
+            veritatis, veniam perspiciatis unde, minima nesciunt! Reiciendis suscipit, optio voluptatum ipsam molestias
+            sit
+            nulla.</p>
+    </div>
+    <div class="myP">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsa est, dignissimos velit magnam modi
+        dolore, nostrum iure expedita aliquam officia soluta culpa sed et tempore at accusamus natus rem!
+    </div>
+    <div>
+        <div class="myP myPMore">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga repellat adipisci consequuntur commodi quo
+            iure minus quos dolores quas voluptatibus velit, reiciendis ut. Nostrum ratione repellat nemo dicta
+            assumenda aspernatur?
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<p>
+	HTML은 요소 안에 
+	<strong>다른 요소</strong>가 들어갈 수 있습니다
+</p>
+
+<!--(주석)잘못 사용된 예 -->
+<p>
+	HTML은 요소 안에 
+	<strong>다른 요소 가 들어갈 수 있습니다
+</p>
+</strong>
+
+<html>
+
+<head></head>
+
+<body>
+  <section>
+    <h1>
+      <strong></strong>
+    </h1>
+    <img>
+    <div>
+      <p><strong></strong></p>
+      <p><strong></strong></p>
+      <p><strong></strong></p>
+    </div>
+  </section>
+</body>
+
+</html>
+
+<!-- HTML 4.01 Strict -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+ 
+<!-- HTML 4.01 Transitional -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<!-- O -->
+<div>
+	블록요소 안
+	<span>인라인요소 중첩 가능</span>
+</div>
+
+<!-- X -->
+<span>
+	인라인요소 안
+	<div>블록요소 중첩 불가능</div>
+</span>
+
+<header></header>
+<footer></footer> <!-- 하단에 -->
+
+<nav>          <!-- 브레드크럼 종속과목강문계처럼..-->
+	<ol>
+		<li><a href="#">위니브</a></li>
+		<li><a href="#">캐릭터소개</a></li>
+		<li>라이캣</li>
+	</ol>
+</nav>

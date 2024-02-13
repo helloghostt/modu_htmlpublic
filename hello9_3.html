@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+    </style>
+</head>
+<body>
+    <article class="parent">
+        <ol>
+            <li><button class="btn-first" type="button">버튼1</button></li>
+            <li><button type="button">버튼2</button></li>
+            <li><button type="button">버튼3</button></li>
+        </ol>
+    </article>
+
+    <script>
+        const parent = document.querySelector('.parent');
+        parent.addEventListener('click', function (event)  {
+            console.log(this);
+        });
+
+        //    const myObj = {
+        //    name: 'jaehyun',
+        //    walk() {
+        //        parent.addEventListener('click', () => {
+        //            console.log(this.name + ' is walking');
+        //        })
+        //    }
+        //}
+        <!-- 앵커의 기본 동작을 중지 -->
+        <a href="https://www.naver.com" class="link">네이버 링크입니다만..</a>
+        const link = document.querySelector('.link');
+        link.addEventListener('click', (event) => {
+            console.log('clicked');
+            event.preventDefault();
+        })
+    </script>
+
+</body>
+
+</html>
+        
+        //<!-- 앵커의 기본 동작을 중지 -->
+        //<a href="https://www.naver.com" class="link">네이버 링크입니다만..</a>
+        //<script>
+        //    const link = document.querySelector('.link');
+        //    link.addEventListener('contextmenu', (event) => {
+        //        alert("해당 페이지에서는 오른쪽 클릭을 제한합니다.");
+        //        event.preventDefault();
+        //    });
+        //</script>
+        //<!-- submit 의 기본 동작을 중지 -->
+        //<form action="">
+        //    <button type="submit" class="submit">제출</button>
+        //</form>
+        //<script>
+        //    const submit = document.querySelector('.submit');
+        //    submit.addEventListener('contextmenu', (event) => {
+        //        alert("해당 페이지에서는 오른쪽 클릭을 제한합니다.");
+        //        event.preventDefault();
+        //    });
+        //</script>

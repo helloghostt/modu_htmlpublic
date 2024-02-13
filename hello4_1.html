@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>static</title>
+  <style>
+  .box1{
+    position:static;
+    background-color: green;
+    color:white;
+    width: 100px;
+    height: 100px;
+  }
+
+  .box2{
+    position:static;
+    background-color: red;
+    color:white;
+    width: 100px;
+    height: 100px;
+  }
+
+  .box3{
+    position:static;
+    background-color: blue;
+    color:white;
+    width: 100px;
+    height: 100px;
+  }
+  </style>
+</head>
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+</body>
+</html>
+
+
+<br>
+<br>
+<br>
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>relative</title>
+  <style>
+  .box1{
+    position: static;
+    background-color: green;
+    color: white;
+    width: 100px;
+    height: 100px;
+  }
+  .box2{
+    position:relative;
+    left: 40px;  
+    /*(-40)px같음*/
+    background-color: red;
+    color:white;
+    width: 100px;
+    height: 100px;
+  }
+  </style>
+</head>
+<body>
+  <div class="box1">box1</div>
+  <div class="box2">box2</div>
+</body>
+</html>
+<br>
+<br>
+<br>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style>
+        section {
+            height: 1000px;
+            border: 3px solid black;
+        }
+
+        h2 {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0px;
+            background: greenyellow;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>sticky test</h1>
+    (section>h2{오늘의 메뉴$}+ul>(li>lorem)*3)*3
+</body>
+
+</html>
+

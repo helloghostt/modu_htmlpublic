@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let result = fetch('https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json');
+        result.then((data)=> {
+            console.log(data)
+        });
+    </script>
+</body>
+</html>
+
+<!-- async function message() {
+    const hello = await new Promise((resolve) => {
+        setTimeout(() => {
+            resolve('hello');
+        }, 100)
+    })
+    const world = await new Promise((resolve) => {
+        setTimeout(() => {
+            resolve('world');
+        }, 100)
+    })
+    console.log(`${hello} ${world}`);
+}
+message();
+
+이 코드를 promise만 사용하도록 바꾸면
+
+function message() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve('hello');
+        }, 100);
+    }).then((hello) => {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve('world');
+            }, 100);
+        }).then((world) => {
+            console.log(`${hello} ${world}`);
+        });
+    });
+}
+message();
+
+-->

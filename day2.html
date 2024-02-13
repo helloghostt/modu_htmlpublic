@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td,
+        th {
+            border: 1px solid black;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .colSecond {
+            width: 20%;
+            background-color: yellow;
+            border: 2px dotted red;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>3-1반 역사 성적표</caption>
+        <tfoot>
+            <tr>
+                <td colspan="3" class="text-center">평균</td>
+                <td>84점</td>
+            </tr>
+        </tfoot>
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>반</th>
+                <th>번호</th>
+                <th>점수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>재현</td>
+                <td rowspan="3">1반</td>
+                <td>1번</td>
+                <td>70점</td>
+            </tr>
+            <tr>
+                <td>재현</td>
+                <!-- <td>1반</td> -->
+                <td>1번</td>
+                <td>70점</td>
+            </tr>
+            <tr>
+                <td>재현</td>
+                <!-- <td>1반</td> -->
+                <td>1번</td>
+                <td>70점</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- <table>
+        <caption>테이블의 제목</caption>
+        <colgroup>
+            <col>
+            <col class="colSecond">
+            <col>
+        </colgroup>
+        <tfoot>
+            <tr>
+                <td>맛있다.</td>
+                <td>맛없다.</td>
+                <td>보통이다.</td>
+            </tr>
+        </tfoot>
+        <thead>
+            <tr>
+                <th>월요일</th>
+                <th>화요일</th>
+                <th>수요일</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2">짜장면</td>
+                <td rowspan="2">피자</td>
+            </tr>
+            <tr>
+                <td>육계장</td>
+                <td>라면</td>
+                
+            </tr>
+        </tbody>
+
+    </table> -->
+    <br>
+    <br>
+    <br>
+    <form>
+        <fieldset>
+            <legend>HTML 스터디가 망해가는 이유</legend>
+            <label>
+                노잼이다
+                <input type="radio" name="reasome">
+            </label>
+            <label>
+                너무 어렵다
+                <input type="radio" name="reasome">
+            </label>
+            <label>
+                주말에 뭐하는 짓이냐
+                <input type="radio" name="reasome">
+            </label>
+            <br>
+            <label for="">만약 다른 스터디를 하고 싶다면?</label>
+            <br>
+            <select name="lang">
+                <option value="javascript">자바스크립트</option>
+                <option value="python">파이썬</option>
+                <option value="java">자바</option>
+            </select>
+            <br>
+            <label for="lastWord">마지막으로 하고싶은 말</label>
+            <br>
+            <textarea name="lastWord" id="lastWord" cols="30" rows="2"></textarea>
+            <br>
+            <button type="submit">전송하기</button>
+            <button type="reset">다시 작성하기</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>
